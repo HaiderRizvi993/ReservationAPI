@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+    h1 Add New Product
+    form(action="/reservations/add",method="post")
+        .form-group
+            label(for="name") Name
+            input#name(type="text", class="form-control", name="name")
+        .form-group
+            label(for="days") Reservation Days
+            input#days(type="text", class="form-control", name="days")
+        .form-group
+            label(for="days") Reservation Date
+            input#days(type="Date", class="form-control", name="date")
+        .form-group
+            label(for="days") Contact Number
+            input#days(type="number", class="form-control", name="contact_number")
+        input(type="submit", class="btn btn-info")

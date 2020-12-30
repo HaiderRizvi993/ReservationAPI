@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+    h1 Edit Product
+    form(action="/reservations/edit/"+reservation._id,method="post")
+        .form-group
+            label(for="name")  Name
+            input#name(type="text", class="form-control", name="name", value=reservation.name)
+        .form-group
+            label(for="days") Reservation Days
+            input#days(type="text", class="form-control", name="days", value=reservation.days)
+        .form-group
+            label(for="days") Reservation Date
+            input#days(type="Date", class="form-control", name="date" value=reservation.date)
+        .form-group
+            label(for="days") Contact Number
+            input#days(type="number", class="form-control", name="contact_number" value=reservation.contact_number)    
+        input(type="submit", class="btn btn-info")
+    

@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/reservations/add", class="btn btn-success float-right") Add New Reservation
+    table.table
+        thead
+            tr
+                th Name
+                th Reservation Days
+                th Contact Number
+                th Booking Date
+                th Actions
+        tbody
+            each reservation in reservations
+                tr
+                    td=reservation.name
+                    td=reservation.days
+                    td=reservation.contact_number
+                    td=reservation.date
+                    td
+                        a(href="/reservations/delete/"+reservation._id, class="btn btn-danger") Delete
+                        a(href="/reservations/edit/"+reservation._id, class="btn btn-warning") Edit
