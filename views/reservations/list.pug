@@ -1,11 +1,11 @@
 extends ../layout
 
 block content
+    h1=title
     .row
         .col-sm-8
-            h1=title
-        .col-sm-4
             a(href="/reservations/add", class="btn btn-success float-right") Add New Reservation
+        .col-sm-4
     table.table
         thead
             tr
